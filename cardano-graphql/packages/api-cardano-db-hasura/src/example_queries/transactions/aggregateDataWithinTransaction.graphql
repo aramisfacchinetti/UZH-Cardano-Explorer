@@ -1,0 +1,40 @@
+query aggregatedDataWithinTransaction(
+    $hashes: [Hash32Hex]!
+){
+    transactions(
+        where: { hash: { _in: $hashes }},
+        order_by: { fee: desc }
+    ) {
+        deposit
+        fee
+        hash
+        inputs_aggregate {
+            aggregate {
+                count
+                max {
+                    value
+                }
+                min {
+                    value
+                }
+                sum {
+                    value
+                }
+            }
+        }
+        outputs_aggregate {
+            aggregate {
+                count
+                max {
+                    value
+                }
+                min {
+                    value
+                }
+                sum {
+                    value
+                }
+            }
+        }
+    }
+}

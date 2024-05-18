@@ -1,0 +1,252 @@
+@mixin footerText($color, $fontFamily, $fontSize, $fontWeight) {
+  color: $color;
+  font-family: $fontFamily, sans-serif;
+  font-size: $fontSize;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: $fontWeight;
+}
+
+.footerContainer {
+  padding: 0 0 92px;
+  margin-top: 72px;
+  width: 100%;
+
+  .footerContent {
+    margin: 0 auto;
+    max-width: 872px;
+    width: 100%;
+  }
+
+  .footerTopContainer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 872px;
+    width: 100%;
+
+    .footerTopContainerLeft {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      max-width: 200px;
+      width: 100%;
+
+      @media (max-width: 768px) {
+        padding-bottom: 10px;
+      }
+
+      p {
+        @include footerText(var(--solid-text-color), ProximaNova, 12px, 300);
+        letter-spacing: 1.2px;
+        line-height: 1.5;
+        opacity: 0.5;
+        text-transform: uppercase;
+      }
+
+      .copyright {
+        padding-right: 3px;
+      }
+
+      .gitLink {
+        display: initial;
+
+        .gitIcon {
+          height: 18px;
+          width: 18px;
+
+          path {
+            fill: var(--primary-highlight-color-hover);
+          }
+        }
+      }
+    }
+
+    .logos {
+      align-items: center;
+      display: flex;
+      justify-content: space-evenly;
+
+      .logoText {
+        align-items: center;
+        display: flex;
+
+        .iohkLogo {
+          height: 22px;
+          width: 29px;
+        }
+
+        .iohkText {
+          @include footerText(
+            var(--solid-text-color),
+            ProximaNova,
+            10px,
+            normal
+          );
+          letter-spacing: 1px;
+          line-height: 1.6;
+          opacity: 0.5;
+          padding-left: 10px;
+          text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+          padding-bottom: 15px;
+        }
+      }
+
+      .socialIcons {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        .twitterIcon,
+        .facebookIcon,
+        .youtubeIcon,
+        .newsletterIcon {
+          filter: invert(0.5);
+          height: 12px;
+          margin-left: 10px;
+          object-fit: contain;
+          width: 14px;
+        }
+
+        .twitterIcon:hover,
+        .facebookIcon:hover,
+        .youtubeIcon:hover,
+        .newsletterIcon:hover {
+          filter: invert(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .footerMiddleContainer {
+    .footerSeparator {
+      background-color: var(--solid-text-color);
+      height: 2px;
+      margin: 9px 0;
+      opacity: 0.1;
+    }
+  }
+
+  .footerBottomContainer {
+    display: flex;
+
+    .cardanoTextContainer {
+      max-width: 63.5%;
+
+      .cardanoTextTitle {
+        @include footerText(var(--hint-text-color), ProximaNova, 10px, 300);
+        letter-spacing: 0.2px;
+        line-height: 1.6;
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      .cardanoText {
+        @include footerText(var(--hint-text-color), ProximaNova, 10px, 300);
+        letter-spacing: 0.2px;
+        line-height: 1.6;
+
+        p {
+          font-style: italic;
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+      }
+    }
+
+    a {
+      @include footerText(
+        var(--primary-highlight-color),
+        ProximaNova,
+        10px,
+        600
+      );
+      opacity: 0.5;
+      letter-spacing: 0.5px;
+      line-height: 1.8;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.highlightedLink {
+        color: var(--footer-text-color);
+        font-weight: 600;
+        opacity: 1;
+        &:hover {
+          color: var(--primary-highlight-color-hover);
+        }
+      }
+    }
+
+    .footerMenusContainer {
+      display: flex;
+
+      .aboutCardanoMenuContainer,
+      .joinTheCommunityMenuContainer {
+        padding-left: 18px;
+
+        .aboutCardanoTitle,
+        .joinTheCommunityTitle {
+          @include footerText(var(--solid-text-color), ProximaNova, 10px, 600);
+          letter-spacing: 0.5px;
+          line-height: 1.8;
+          opacity: 0.5;
+        }
+
+        .aboutCardanoMenu,
+        .joinTheCommunityMenu {
+          list-style: none;
+          padding: 0;
+          text-align: left;
+        }
+
+        @media (max-width: 992px) {
+          min-width: 180px;
+        }
+
+        @media (max-width: 768px) {
+          min-width: 150px;
+          padding-left: 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        margin-left: 30px;
+      }
+
+      @media (max-width: 530px) {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 0;
+        padding-top: 20px;
+      }
+    }
+
+    @media (max-width: 530px) {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 0 32px;
+  }
+}

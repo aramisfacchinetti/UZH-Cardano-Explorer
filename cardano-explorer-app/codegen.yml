@@ -1,0 +1,8 @@
+overwrite: true
+schema: node_modules/@cardano-graphql/client-ts/api/cardano-db-hasura/schema.graphql
+documents: "source/**/*.graphql"
+generates:
+  generated/typings/graphql-schema.d.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"

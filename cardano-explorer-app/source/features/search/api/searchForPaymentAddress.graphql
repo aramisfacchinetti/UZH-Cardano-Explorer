@@ -1,0 +1,42 @@
+
+query searchForPaymentAddress(
+  $address: String!
+) {
+    transactions_aggregate (
+        where: {
+            _or: [{
+                inputs: {
+                    address: {
+                        _eq: $address
+                    }
+                }
+            }, {
+                outputs: {
+                    address: {
+                        _eq: $address
+                    }
+                }
+            }]
+        }
+    ) {
+        aggregate {
+            count
+        }
+    }
+    paymentAddresses(addresses: [$address]) {
+        summary {
+            assetBalances {
+                asset {
+                  assetName
+                  decimals
+                  description
+                  fingerprint
+                  name
+                  policyId
+                  ticker
+                }
+                quantity
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+fragment EpochOverview on Epoch {
+  blocks (limit: 1) {
+    protocolVersion
+  }
+  blocksCount
+  lastBlockTime
+  number
+  startedAt
+  output
+  transactionsCount
+}

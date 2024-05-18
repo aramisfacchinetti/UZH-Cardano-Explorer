@@ -1,0 +1,68 @@
+fragment TransactionDetails on Transaction {
+  block {
+    epochNo
+    hash
+    number
+    slotNo
+  }
+  deposit,
+  fee,
+  hash,
+  includedAt,
+  mint {
+    asset {
+      assetName
+      decimals
+      description
+      fingerprint
+      name
+      policyId
+      ticker
+    }
+    quantity
+  }
+  inputs {
+    address
+    sourceTxHash
+    sourceTxIndex
+    value
+    tokens {
+      asset {
+        assetName
+        decimals
+        description
+        fingerprint
+        name
+        policyId
+        ticker
+      }
+      quantity
+    }
+  },
+  metadata {
+    key
+    value
+  },
+  outputs {
+    address
+    index
+    value
+    tokens {
+      asset {
+        assetName
+        decimals
+        description
+        fingerprint
+        name
+        policyId
+        ticker
+      }
+      quantity
+    }
+  },
+  totalOutput
+  withdrawals {
+    address
+    amount
+  }
+}

@@ -1,0 +1,19 @@
+fragment BlockOverview on Block {
+  forgedAt
+  slotLeader {
+    description
+  }
+  epochNo,
+  hash
+  number
+  size
+  slotNo
+  transactions_aggregate {
+    aggregate {
+      count
+      sum {
+        totalOutput
+      }
+    }
+  }
+}

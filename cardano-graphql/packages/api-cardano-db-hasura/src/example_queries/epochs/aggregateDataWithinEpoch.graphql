@@ -1,0 +1,37 @@
+query aggregatedDataWithinEpoch (
+    $orderBy: [Epoch_order_by!]
+    $where: Epoch_bool_exp
+) {
+    epochs(
+        order_by: $orderBy
+        where: $where
+    ) {
+        blocksCount
+        activeStake_aggregate {
+            aggregate {
+                sum {
+                    amount
+                }
+            }
+        }
+        blocks_aggregate {
+            aggregate {
+                count
+                max {
+                    fees
+                    size
+                }
+                min {
+                    fees
+                    size
+                }
+                sum {
+                    fees
+                    size
+                }
+            }
+        }
+        fees
+        number
+    }
+}

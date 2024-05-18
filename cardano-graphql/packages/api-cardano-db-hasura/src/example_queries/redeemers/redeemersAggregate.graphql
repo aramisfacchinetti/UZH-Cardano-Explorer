@@ -1,0 +1,21 @@
+query redeemersAggregate {
+    redeemers_aggregate {
+        aggregate {
+          max {
+              fee
+              unitMem
+              unitSteps
+          }
+          min {
+              fee
+              unitMem
+              unitSteps
+          }
+          sum {
+              fee
+              unitMem
+              unitSteps
+          }
+        }
+    }
+}

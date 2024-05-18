@@ -1,0 +1,14 @@
+query cardanoDynamic {
+  cardano {
+    tip {
+      number
+      slotInEpoch
+      slotNo
+      forgedAt
+      protocolVersion
+    }
+    currentEpoch {
+      number
+    }
+  }
+}

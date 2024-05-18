@@ -1,0 +1,16 @@
+query allRewardsAggregateFields {
+    rewards_aggregate {
+        aggregate {
+            count
+            max {
+                amount
+            }
+            min {
+                amount
+            }
+            sum {
+                amount
+            }
+        }
+    }
+}

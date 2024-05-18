@@ -1,0 +1,15 @@
+query collateralOutputsAggregate {
+    collateralOutputs_aggregate {
+        aggregate {
+          max {
+              value
+          }
+          min {
+              value
+          }
+          sum {
+              value
+          }
+        }
+    }
+}

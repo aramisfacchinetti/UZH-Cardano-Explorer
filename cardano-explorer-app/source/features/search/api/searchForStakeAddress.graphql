@@ -1,0 +1,44 @@
+#import "../../transactions/api/TransactionDetails.graphql"
+
+query searchForStakeAddress(
+  $address: StakeAddress!
+) {
+  transactions_aggregate (
+    where: {
+      withdrawals: {
+        address: {
+          _eq: $address
+        }
+      }
+    }
+  ) {
+    aggregate {
+      count
+    }
+  }
+  withdrawals (
+    where: {
+      address: {
+        _eq: $address
+      }
+    }
+  ) {
+    transaction {
+      ...TransactionDetails
+    }
+  }
+  withdrawals_aggregate (
+    where: {
+      address: {
+        _eq: $address
+      }
+    }
+  ) {
+    aggregate {
+      count
+      sum {
+        amount
+      }
+    }
+  }
+}

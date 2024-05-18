@@ -1,0 +1,4 @@
+{
+  "name": "Cardano GraphQL Schema",
+  "schemaPath": "./schema.graphql"
+}

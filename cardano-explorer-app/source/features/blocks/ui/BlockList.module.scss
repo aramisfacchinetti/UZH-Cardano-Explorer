@@ -1,0 +1,98 @@
+.blockListContainer {
+  position: relative;
+
+  :global {
+    .epoch {
+      width: 40px;
+    }
+
+    .slotNo {
+      width: 80px;
+    }
+
+    .blocksSlots {
+      width: 80px;
+    }
+
+    .createdAt {
+      width: 160px;
+    }
+
+    .createdBy {
+      text-align: right;
+      width: 132px;
+    }
+
+    .transactions {
+      width: 120px;
+    }
+
+    .size {
+      text-align: right;
+      width: 120px;
+    }
+
+    .output {
+      text-align: right;
+      width: 122px;
+    }
+
+    @media (max-width: 991px) and (min-width: 768px) {
+      .createdAt {
+        width: 140px;
+      }
+    }
+
+    @media (max-width: 767px) and (min-width: 576px) {
+      .size {
+        display: none;
+      }
+
+      .createdBy {
+        display: none;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .epoch {
+        text-align: center;
+        width: 166px;
+      }
+
+      .blocksSlots {
+        width: 110px;
+      }
+
+      .createdAt {
+        text-align: center;
+        width: 198px;
+      }
+
+      .transactions {
+        display: none;
+      }
+
+      .size {
+        display: none;
+      }
+
+      .output {
+        display: none;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .createdBy {
+        display: none;
+      }
+    }
+  }
+}
+
+.loadingOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+  backdrop-filter: blur(1px);
+}

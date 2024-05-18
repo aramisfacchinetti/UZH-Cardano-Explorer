@@ -1,0 +1,72 @@
+.addressSummaryContainer {
+  margin: 0 auto;
+  max-width: 872px;
+  width: 100%;
+
+  .header {
+    margin-bottom: 41px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 575px) {
+      flex-direction: column;
+    }
+
+    .infoPanel {
+      color: var(--info-text-color);
+      flex: 1;
+      font-family: ProximaNova, sans-serif;
+      max-width: calc(100% - 124px);
+
+      @media (max-width: 575px) {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .infoRow {
+        display: flex;
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        line-height: 1.33;
+        margin-bottom: 10px;
+
+        .infoLabel {
+          flex: 0 0 130px;
+          font-weight: 600;
+        }
+
+        .infoValue {
+          font-weight: 300;
+          word-break: break-all;
+
+          .tokenList,
+          .scrollableTokenList {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .token {
+              margin-top: 5px;
+            }
+          }
+
+          .scrollableTokenList {
+            height: 120px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+          }
+        }
+      }
+    }
+
+    .qrcode {
+      background-color: #ffffff;
+      height: 84px;
+      padding: 7px 7px 3px;
+      width: 84px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+query filteredAggregatedDataWithinTransaction(
+    $hash: Hash32Hex!
+    $outputsAddress: String!
+){
+    transactions(
+        where: { hash: { _eq: $hash }}
+            ) {
+        hash
+        outputs_aggregate ( where: { address: { _eq: $outputsAddress }}) {
+            aggregate {
+                count
+            }
+        }
+    }
+}

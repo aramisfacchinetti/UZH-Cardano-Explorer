@@ -1,0 +1,84 @@
+.epochListContainer {
+  position: relative;
+
+  :global {
+    .epoch {
+      width: 90px;
+    }
+
+    .TableBodyRow_row {
+      .epoch {
+        color: var(--primary-highlight-color);
+      }
+    }
+
+    .blocks,
+    .slots {
+      width: 60px;
+    }
+
+    .startedAt {
+      width: 170px;
+    }
+
+    .lastBlockAt {
+      width: 170px;
+    }
+
+    .transactions {
+      width: 140px;
+    }
+
+    .output {
+      flex: 1;
+      text-align: right;
+    }
+
+    @media (max-width: 991px) and (min-width: 768px) {
+      .transactions {
+        display: none;
+      }
+    }
+
+    @media (max-width: 767px) and (min-width: 576px) {
+      .lastBlockAt {
+        display: none;
+      }
+      .transactions {
+        display: none;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .epoch {
+        width: 50px;
+      }
+      .blocksSlots {
+        width: 100px;
+      }
+      .startedAt {
+        flex: 1;
+        width: auto;
+      }
+      .lastBlockAt {
+        display: none;
+      }
+      .transactions {
+        display: none;
+      }
+      .output {
+        display: none;
+      }
+    }
+  }
+}
+
+.loadingOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(1px);
+  z-index: 99;
+}

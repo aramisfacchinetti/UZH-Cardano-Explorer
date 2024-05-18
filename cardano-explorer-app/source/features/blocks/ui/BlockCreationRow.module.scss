@@ -1,0 +1,71 @@
+.blockCreationRowContainer {
+  align-items: center;
+  border-bottom: 2px dotted var(--dotted-separator-color);
+  color: var(--table-text-color);
+  display: flex;
+  font-family: ProximaNova, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  line-height: 1.33;
+  padding: 5px 25.5px;
+  text-align: center;
+
+  @media (max-width: 991px) {
+    padding: 5px 12px;
+  }
+
+  .performance {
+    text-align: left;
+    width: 218px;
+  }
+
+  .performancePercentage {
+    color: var(--info-text-color);
+  }
+
+  .sharedRewards {
+    text-align: left;
+    width: 218px;
+  }
+
+  .sharedRewardsValue {
+    color: var(--info-text-color);
+  }
+
+  .slotsElected {
+    text-align: left;
+    width: 218px;
+  }
+
+  .slotsElectedPercentage {
+    color: var(--info-text-color);
+  }
+
+  .stakePool {
+    color: var(--table-text-color);
+    overflow: hidden;
+    padding: 0 20px 0 0 !important;
+    text-align: left;
+    text-overflow: ellipsis;
+    width: 218px;
+    white-space: nowrap;
+  }
+
+  .stakePoolName {
+    color: var(--info-text-color);
+  }
+
+  @media (max-width: 575px) {
+    .performance {
+      display: none;
+    }
+
+    .sharedRewards {
+      display: none;
+    }
+
+    .slotsElected {
+      text-align: center;
+    }
+  }
+}

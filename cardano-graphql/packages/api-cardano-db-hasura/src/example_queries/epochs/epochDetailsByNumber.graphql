@@ -1,0 +1,22 @@
+query epochDetailsByNumber (
+    $number: Int!
+){
+    epochs( where: { number: { _eq: $number }}) {
+        adaPots {
+            deposits,
+            fees,
+            reserves,
+            rewards,
+            slotNo,
+            treasury,
+            utxo
+        }
+        blocksCount
+        fees
+        output
+        number
+        transactionsCount
+        startedAt
+        lastBlockTime
+    }
+}
