@@ -32,7 +32,7 @@ To setup the UZH Cardano Explorer follow the following steps:
 
     NB: for the UZH Cardano node the files were located in the `/opt/cardano/cnode/files` folder
 
-## 1. Setup Cardano Graphql
+## Setup Cardano Graphql
 
 1. Navigate to the `cardano-graphql` folder:
     ```bash
@@ -119,7 +119,7 @@ To setup the UZH Cardano Explorer follow the following steps:
     docker-compose up -d
     ```
 
-## 2. Setup the Cardano Explorer App
+## Setup the Cardano Explorer App
 
 1. Navigate to the `cardano-explorer-app` folder:
     ```bash
