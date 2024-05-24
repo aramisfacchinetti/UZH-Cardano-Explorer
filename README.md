@@ -116,7 +116,7 @@ To setup the UZH Cardano Explorer follow the following steps:
 
 7. Run Cardano graphql with Docker:
     ```bash
-    docker-compose up -d
+    docker compose up -d
     ```
 
 ## Setup the Cardano Explorer App
