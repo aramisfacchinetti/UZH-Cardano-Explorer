@@ -18,6 +18,8 @@ To setup the UZH Cardano Explorer follow the following steps:
 
 - Cardano CLI
 
+- Docker
+
 - Locate your Cardano node's `node.socket` file
 
     NB: for the UZH Cardano node the file was located in the `/opt/cardano/cnode/sockets` folder
