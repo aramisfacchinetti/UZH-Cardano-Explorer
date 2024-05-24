@@ -16,6 +16,8 @@ To setup the UZH Cardano Explorer follow the following steps:
     * 320 Gigabytes or more of disk storage (preferably SSD which are 2-5 times faster than
     electro-mechanical disks).
 
+- Cardano CLI
+
 - Locate your Cardano node's `node.socket` file
 
     NB: for the UZH Cardano node the file was located in the `/opt/cardano/cnode/sockets` folder
