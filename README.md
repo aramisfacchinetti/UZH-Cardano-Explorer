@@ -3,9 +3,9 @@
 To setup the UZH Cardano Explorer follow the following steps:
 
 ## Prerequisites
-1. Run a Cardano node in the UZH Cardano network following these [instructions](https://github.com/mostafachegeni/UZH-Cardano-Network)
+- Run a Cardano node in the UZH Cardano network following these [instructions](https://github.com/mostafachegeni/UZH-Cardano-Network)
 
-2. Have access to the machine running UZH Cardano node and, according to the [IntersectMBO/cardano-db-sync](https://github.com/IntersectMBO/cardano-db-sync) repository, have the follow system requirements:
+- Have access to the machine running UZH Cardano node and, according to the [IntersectMBO/cardano-db-sync](https://github.com/IntersectMBO/cardano-db-sync) repository, have the follow system requirements:
     * Any of the big well known Linux distributions (eg, Debian, Ubuntu, RHEL, CentOS, Arch
     etc).
     * 32 Gigabytes of RAM or more.
@@ -16,11 +16,11 @@ To setup the UZH Cardano Explorer follow the following steps:
     * 320 Gigabytes or more of disk storage (preferably SSD which are 2-5 times faster than
     electro-mechanical disks).
 
-3. Locate your Cardano node's `node.socket` file
+- Locate your Cardano node's `node.socket` file
 
     NB: for the UZH Cardano node the file was located in the `/opt/cardano/cnode/sockets` folder
 
-4. Locate the following configuration and genesis files of the Cardano node:
+- Locate the following configuration and genesis files of the Cardano node:
     - config.json
     - dbsync.json
     - params.json
